@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <title>Admin</title>
+    <style>
+        .carousel-item {
+            height: 32rem;
+            color: white;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .container-carousel {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        
+        .overlay-image {
+            min-height: 60vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        
+        .jump-on-hover:hover {
+            transition: transform 0.5s ease-in;
+            transform: translateY(-30px);
+        }
+        
+        .media img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+        .third:hover .row {
+            transform: translateY(-40px);
+            transition: transform 0.8s ease;
+        }
+        
+        .story img {
+            max-width: 100%;
+            height: auto;
+            width: 600px;
+            transition: transform 0.3s ease;
+        }
+        
+        .story:hover img {
+            transform: scale(1.1);
+        }
+        
+        .btn-yellow {
+            background-color: yellow;
+            color: black;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .btn-yellow:hover {
+            background-color: coral;
+            border-color: coral;
+            color: white;
+        }
+        
+        .scaled-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .scaled-image:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .fourth .btn-primary:hover {
+            background-color: goldenrod;
+            color: white;
+        }
+        
+        .fifth .row {
+            display: flex;
+        }
+        
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: coral;
+        }
+        
+        .footer p {
+            color: #fff;
+        }
+    </style>
+
+
+
+    <title>Carousel</title>
+</head>
+
+<body style="background-color: cornsilk">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-4" href="#"><img src="logo.png" alt="Image" height="80"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 300px;">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.php">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">ORDERS</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="FinalAboutUs/indexAbout.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+
+            </ul>
+            <div class=" my-2 my-lg-0 ">
+                <div class="nav-item dropdown mr-3">
+                    <a class="nav-link" style="margin-right: 80px;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="login.html"><button type="button"
+                                class="btn btn-outline-warning">Logout</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!------First Container----->
+    <div class="first text-center">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(image/honey4.jpg)">
+                    <div class="container-carousel">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-10">
+                                <p>Taste the quality</p>
+                                <h2>Organic Premium Honey</h2>
+                                <p>
+                                    Enjoy sweet, aromatic honey made by hardworking people of ecologically clean raw materials in the most pure environment
+                                </p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(image/honey6.jpg)">
+                    <div class="container-carousel">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-10">
+                                <p>Taste the quality</p>
+                                <h2>Organic Premium Honey</h2>
+                                <p>We can provide the best honey you'll ever find</p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(image/honey5.jpg)">
+                    <div class="container-carousel">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-10">
+                                <p>Taste the quality</p>
+                                <h2>Organic Premium Honey</h2>
+                                <p>
+                                    To provide the best quality honey, we are second to none
+                                </p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                <span class="sr-only">previous</span>
+                <span class="carousel-control-prev-icon" area-hidden="true"></span>
+            </a>
+
+            <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                <span class="sr-only">next</span>
+                <span class="carousel-control-next-icon" area-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+    <!------Second Container----->
+    <div class="second" style="background-color: #fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12" style="padding-top: 20px">
+                    <div class="media p-2 jump-on-hover" style="margin-top: 20px">
+                        <div class="media p-2">
+                            <img src="image/freeshipping.png" style="
+                    border: 1px solid rgb(200, 149, 95);
+                    border-radius: 60%;
+                    background-color: rgb(200, 149, 95);
+                  " alt="image of freeshipping" class="img-fluid p-1" />
+                            <div class="media-body">
+                                <h5 class="mt-0">Freeshipping</h5>
+                                <p>
+                                    "Enjoy the convenience of stress-free shopping with our free shipping services, ensuring your favorite products are delivered to your doorstep without any additional cost.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12" style="padding-top: 20px">
+                    <div class="media p-2 jump-on-hover" style="margin-top: 20px">
+                        <div class="media p-2">
+                            <img src="image/refund.png" style="
+                    border: 1px solid rgb(200, 149, 95);
+                    border-radius: 60%;
+                    background-color: rgb(200, 149, 95);
+                  " alt="image of money back guarantee" class="img-fluid p-1" />
+                            <div class="media-body">
+                                <h5 class="mt-0">Money Back Guarantee</h5>
+                                <p>
+                                    Shop confidently with our money-back guarantee, providing you peace of mind and assurance that if you're not completely satisfied, your investment is protected, and you can receive a refund..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12" style="padding-top: 20px">
+                    <div class="media p-2 jump-on-hover" style="margin-top: 20px">
+                        <div class="media p-2">
+                            <img src="image/onlinesupport.png" style="
+                    border: 1px solid rgb(200, 149, 95);
+                    border-radius: 60%;
+                    background-color: rgb(200, 149, 95);
+                  " alt="image of online support" class="p-1 img-fluid" />
+                            <div class="media-body">
+                                <h5 class="mt-0">Online support</h5>
+                                <p>
+                                    Experience uninterrupted convenience with our 24/7 online support, ensuring that expert assistance and guidance are just a click away whenever you need it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------Third Container----->
+    <div class="third" style="background-color: white">
+        <div class="container" style="padding-top: 30px">
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-bottom: 20px">
+                    <h3 class="mt-0 text-red display-4" style="color: rgb(142, 71, 71)">
+                        Our Story
+                    </h3>
+                    <hr style="border: 1px solid rgb(199, 156, 96)" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="story">
+                        <div class="media-body mt-4">
+                            <h2 style="color: black">
+                                Production of Natural Honey since 1990
+                            </h2>
+                            <p style="color: black">
+                                Welcome to our honey haven, where we take pride in offering the purest and most delicious honey harvested from the heart of nature. With a commitment to quality, our honey selling company brings you a diverse range of premium, natural honey products,
+                                each filled with the goodness of wholesome sweetness and health.
+                            </p>
+                            <a href="products.php" class="btn btn-lg btn-yellow" style="margin-bottom: 30px">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="story" style="margin-bottom: 30px">
+                        <img src="image/story2.jpg" class="rounded img-fluid" alt="honey picture" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--"fourth" section -->
+    <div class="fourth">
+        <div id="myCarouselFourth" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarouselFourth" data-slide-to="0"></li>
+                <li data-target="#myCarouselFourth" data-slide-to="1"></li>
+                <li data-target="#myCarouselFourth" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: cornsilk">
+                    <div class="container-carousel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="color: rgb(142, 71, 71); font-size: 26px">
+                                    What Our Customers Say
+                                </p>
+                                <hr style="
+                      border: 1px solid rgb(199, 156, 96);
+                      margin-left: 14%;
+                      margin-right: 14%;
+                    " />
+
+                                <img src="image/customer1.jpg" alt="freeshipping" class="scaled-image img-fluid" style="
+                      border: 1px solid rgb(200, 149, 95);
+                      border-radius: 60%;
+                      background-color: rgb(200, 149, 95);
+                      height: 250px;
+                      width: 250px;
+                      margin-bottom: 15px;
+                    " />
+                                <p style="color: black">
+                                    As a satisfied customer, I can confidently attest to the exceptional quality, prompt service, and delightful experience provided by this company."
+                                </p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-color: cornsilk">
+                    <div class="container-carousel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="color: rgb(142, 71, 71); font-size: 26px">
+                                    What Our Customers Say
+                                </p>
+                                <hr style="
+                      border: 1px solid rgb(199, 156, 96);
+                      margin-left: 14%;
+                      margin-right: 14%;
+                    " />
+                                <img src="image/customer2.jpg" alt="freeshipping" class="scaled-image img-fluid" style="
+                      border: 1px solid rgb(200, 149, 95);
+                      border-radius: 60%;
+                      background-color: rgb(200, 149, 95);
+                      height: 250px;
+                      width: 250px;
+                      margin-bottom: 15px;
+                    " />
+                                <p style="color: black">
+                                    The high-quality products, efficient service, and dedication to customer satisfaction make them my go-to choice for all things honey
+                                </p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-color: cornsilk">
+                    <div class="container-carousel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="color: rgb(142, 71, 71); font-size: 26px">
+                                    What Our Customers Say
+                                </p>
+                                <hr style="
+                      border: 1px solid rgb(199, 156, 96);
+                      margin-left: 14%;
+                      margin-right: 14%;
+                    " />
+                                <img src="image\custome3.jpg" alt="freeshipping" class="scaled-image img-fluid" style="
+                      border: 1px solid rgb(200, 149, 95);
+                      border-radius: 60%;
+                      background-color: rgb(200, 149, 95);
+                      height: 250px;
+                      width: 250px;
+                      margin-bottom: 15px;
+                    " />
+                                <p style="color: black">
+                                    The high-quality products, efficient service, and dedication to customer satisfaction make them my go-to choice for all things honey
+                                </p>
+                                <a href="products.php" class="btn btn-lg btn-primary mb-3">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#myCarouselFourth" class="carousel-control-prev" role="button" data-slide="prev">
+                <span class="sr-only">previous</span>
+                <span class="carousel-control-prev-icon" area-hidden="true"></span>
+            </a>
+
+            <a href="#myCarouselFourth" class="carousel-control-next" role="button" data-slide="next">
+                <span class="sr-only">next</span>
+                <span class="carousel-control-next-icon" area-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Fifth Container -->
+    <div class="fifth" style="background-color: aliceblue">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-9" style="margin-top: 30px">
+                    <div class="bloom">
+                        <div class="media-bodies">
+                            <h3 class="mt-5">Organic Honey, Be healthy</h3>
+                            <h4>Buy new and save 50% off</h4>
+                            <p>
+                                Unlock a hive of savings! Purchase your favorite golden jars of honey now and enjoy an exclusive 50% off – a sweet deal that brings nature's sweetness to your doorstep while keeping your budget little
+                            </p>
+                            <a href="#" class="btn btn-lg btn-primary" style="margin-bottom: 20px">DISCOVER NEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bloom mt-5" style="margin-top: 10px">
+                        <img src="image/story3.jpg" class="rounded img-small scaled-image" alt="freeshipping" style="width: 300px; height: 300px; margin-bottom: 20px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular brand section -->
+    <div class="sixth" style="background-color: white">
+        <h1 class="popular-products-heading" style="
+          color: chocolate;
+          font-size: 35px;
+          margin-left: 35px;
+          margin-bottom: 25px;
+          padding-top: 30px;
+          text-align: center;
+        ">
+            Popular Products
+        </h1>
+        <div class="card-deck justify-content-center">
+            <div class="card d-flex align-items-center">
+                <img src="image/purehoney.jpg" class="card-img-top img-fluid scaled-image" alt="pure honey" style="width: 300px; height: 300px; margin-top: 20px" />
+                <div class="card-body">
+                    <h5 class="card-title">$200</h5>
+                    <p class="card-text">Pure Honey</p>
+                    <a href="cusinfo.html" class="btn btn-sm btn-primary mb-3">BUY NOW</a>
+
+
+
+                </div>
+            </div>
+
+            <div class="card d-flex align-items-center">
+                <img src="image/rawhoney.jpg" class="card-img-top img-fluid scaled-image" alt="rawhoney" style="width: 300px; height: 300px; margin-top: 20px" />
+                <div class="card-body">
+                    <h5 class="card-title">$300</h5>
+                    <p class="card-text">Raw Honey</p>
+                    <a href="cusinfo.html" class="btn btn-sm btn-primary mb-3">BUY NOW</a>
+                </div>
+            </div>
+
+            <div class="card d-flex align-items-center">
+                <img src="image/honey.jpg" class="card-img-top img-fluid scaled-image" alt="honey" style="width: 300px; height: 300px; margin-top: 20px" />
+                <div class="card-body">
+                    <h5 class="card-title">$250</h5>
+                    <p class="card-text">Sunflower Honey</p>
+                    <a href="cusinfo.html" class="btn btn-sm btn-primary mb-3">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---Join Us section-->
+    <div class="seven">
+        <div class="newsletter text-center" style="margin-top: 20px">
+            <h3 style="color: red">Join Our Newsletter</h3>
+            <p>Get 15% off on your next purchase</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Email address</span>
+                </div>
+                <input type="text" class="form-control wider-input" placeholder="Enter your email address" aria-label="email" aria-describedby="basic-addon1" name="email1" id="email1" style="height: 40px; padding: 8px; box-sizing: border-box" />
+                <a href="#" class="btn btn-sm btn-primary" style="height: 40px; padding: 8px">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    <!---logo section-->
+    <div class="logo text-center" style="background-color: #fff">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <img src="image/beefly.jpg" class="card-img-top img-small scaled-image img-fluid" alt="beefly" style="margin-top: 15px; height: 80%; width: 60%" />
+            </div>
+            <div class="col-md-3">
+                <img src="image/honeybees.jpg" class="card-img-top img-small scaled-image img-fluid" alt="honeybees" style="margin-top: 15px; height: 80%; width: 60%" />
+            </div>
+            <div class="col-md-3">
+                <img src="image/pinbee.jpg" class="card-img-top img-small scaled-image img-fluid" alt="pinbee" style="margin-top: 15px; height: 80%; width: 60%" />
+            </div>
+            <div class="col-md-3">
+                <img src="image/sunbee.jpg" class="card-img-top img-small scaled-image img-fluid" alt="sunbee" style="margin-top: 15px; height: 80%; width: 60%" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer1">
+                        <h4>ABOUT US</h4>
+                        <hr />
+                        <p>About Us</p>
+                        <p>Our Difference</p>
+                        <p>Community Matters</p>
+                        <p>Press</p>
+                        <p>Blog</p>
+                        <p>Bouqs Video</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer1">
+                        <h4>SERVICES</h4>
+                        <hr />
+                        <p>Orders</p>
+                        <p>Help Center</p>
+                        <p>Shipping</p>
+                        <p>Terms of use</p>
+                        <p>Account Detail</p>
+                        <p>My Account</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer1">
+                        <h4>LOCAL</h4>
+                        <hr />
+                        <p>Dhaka</p>
+                        <p>Chattogram</p>
+                        <p>Rajshahi</p>
+                        <p>Rangpur</p>
+                        <p>Barishal</p>
+                        <p>Khulna</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class="footer1">
+                        <h4>NEWSLETTER</h4>
+                        <hr />
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter your email address" aria-label="email" aria-describedby="basic-addon1" name="email2" id="email2" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+</html>
