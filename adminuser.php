@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#">USERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="adminmessage.html">MESSAGES</a>
+                    <a class="nav-link" href="adminmessage.php">MESSAGES</a>
                 </li>
 
             </ul>

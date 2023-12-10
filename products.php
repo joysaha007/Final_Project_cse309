@@ -99,7 +99,7 @@ while ($row = $result->fetch_assoc()) {
         echo '<div class="ml-2">';
         echo '<h4 name="productName">' . $row['productName'] . '</h4>';
         echo '<p name="productPrice">Price: $' . number_format($row['productPrice'], 2) . '</p>';
-        echo '<button class="btn btn-warning ml-2" onclick="deleteProduct(' . $row['id'] . ')">Add To Cart</button>';
+        echo '<a href="cusinfo.html"><button class="btn btn-warning ml-2" onclick="deleteProduct(' . $row['id'] . ')">BUY NOW</button></a>';
         echo '</div>';
     } else {
         echo '<p>Image not found: ' . $absolutePath . '</p>';

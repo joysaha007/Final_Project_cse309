@@ -6,10 +6,13 @@
 }
 
 body {
-    background: url('assets/fresh-honeycombs.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d6b929, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b89e1d, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     
 }
+
 
 header {
     background-color: #ffc107;
@@ -65,4 +68,9 @@ header {
     margin-top: 20px;
 }
 
-/* Add responsive styles if needed */
+
+#particles-js{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
